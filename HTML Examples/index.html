@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+<!--    <script src="script.js"></script>-->
+</head>
+<body>
+
+<canvas id="root" width="700px" height="700px"></canvas>
+
+<script>
+    let canvas = document.getElementById("root");
+    let ctx = canvas.getContext("2d");
+    ctx.fillRect(0,0,100,65);
+
+    ctx.beginPath();
+    ctx.moveTo(100,100);
+    ctx.arcTo(155,100,155,155,50);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#e74c3c";
+    ctx.moveTo(100,100);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#16a085";
+    ctx.moveTo(100,150);
+    ctx.lineTo(200,150);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#2980b9";
+    ctx.moveTo(100,200);
+    ctx.lineTo(200,200);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "#ff3d00";
+    ctx.fillRect(10,300,100,100);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "#0bdd38";
+    ctx.fillRect(120,300,100,100);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "#2e77da";
+    ctx.fillRect(10,410,100,100);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "#ffd200";
+    ctx.fillRect(120,410,100,100);
+    ctx.closePath();
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+    }
+
+for (let i = 1; i <= 50; i++) {
+    ctx.beginPath();
+    ctx.arc(500, 250, getRandomInt(2,101), 0, 2 * Math.PI);
+    ctx.fillStyle = 'rgba(230,226,33,0.5)';
+    ctx.fill();
+    ctx.closePath();
+}
+
+document.addEventListener("mousemove", e => {
+    ctx.beginPath();
+    ctx.arc(e.offsetX, e.offsetY, 20, 0, 2 * Math.PI);
+    ctx.fillStyle = 'rgba(230,226,33,0.5)';
+    ctx.fill();
+    ctx.closePath();
+})
+
+</script>
+
+</body>
+</html>

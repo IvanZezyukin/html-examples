@@ -1,0 +1,111 @@
+/* BEGIN (write your solution here) */
+@font-face {
+    font-family: Raleway;
+    font-weight: 400;
+    src: url("../assets/fonts/Raleway-Regular.ttf")
+}
+@font-face {
+    font-family: Raleway;
+    font-weight: 700;
+    src: url("../assets/fonts/Raleway-Bold.ttf")
+}
+/* END */
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+
+    color: #eee;
+
+    /* BEGIN (write your solution here) */
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    /* END */
+
+    background-image: linear-gradient(to right top, #222831, #282d36, #2d333b, #333841, #393e46);
+}
+
+img {
+    max-width: 100%;
+
+    vertical-align: middle;
+}
+
+a {
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+a:hover {
+    border-width: 3px;
+    border-style: solid;
+    border-bottom: #5ffbf1;
+}
+
+a[data-tab="html"]:hover ~ .tabs-content div[data-tab-content="html"] {
+    display: block;
+}
+a[data-tab="html"]:focus ~ .tabs-content div[data-tab-content="html"] {
+    display: block;
+}
+a[data-tab="css"]:hover ~ .tabs-content div[data-tab-content="css"] {
+    display: block;
+}
+a[data-tab="css"]:focus ~ .tabs-content div[data-tab-content="css"] {
+    display: block;
+}
+a[data-tab="js"]:hover ~ .tabs-content div[data-tab-content="js"] {
+    display: block;
+}
+a[data-tab="js"]:focus ~ .tabs-content div[data-tab-content="js"] {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    color: #00adb5;
+    font-size: 1.5em;
+}
+
+.tabs {
+    width: 1024px;
+    margin: 0 auto;
+
+    /* BEGIN (write your solution here) */
+    column-count: 3;
+    column-gap: 0;
+    column-rule-width: 0;
+    /* END */
+}
+
+/* BEGIN (write your solution here) */
+.tab-name {
+    break-inside: avoid;
+    padding: 20px;
+    column-rule-width: 0;
+    column-gap: 0;
+    background-color: #00adb5;
+}
+.tabs-content {
+    column-span: all;
+    column-count: 3;
+    column-gap: 30px;
+    background-color: #393e46;
+}
+.tabs-content-item {
+    display: none;
+}
+/* END */
+
+.span-all {
+    column-span: all;
+}

@@ -1,0 +1,86 @@
+/* BEGIN (write your solution here) */
+
+/* END */
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+
+    color: #eee;
+
+    /* BEGIN (write your solution here) */
+
+    /* END */
+
+    background-image: linear-gradient(to right top, #222831, #282d36, #2d333b, #333841, #393e46);
+}
+
+img {
+    max-width: 100%;
+
+    vertical-align: middle;
+}
+
+a {
+    color: inherit;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    color: #00adb5;
+    font-size: 1.5em;
+}
+
+.tabs {
+    width: 1024px;
+    margin: 0 auto;
+
+    /* BEGIN (write your solution here) */
+    columns: 3;
+    column-gap: 0;
+    /* END */
+}
+
+/* BEGIN (write your solution here) */
+.tab-name {
+    background-color: #00adb5;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    break-inside: avoid;
+    display: block;
+    outline: 0;
+    outline-offset: 0;
+}
+.tab-name:hover {
+    border-bottom-width: 3px;
+    border-bottom-color: #5ffbf1;
+    border-bottom-style: solid;
+}
+.tab-name:focus {
+    border-bottom-width: 3px;
+    border-bottom-color: #5ffbf1;
+    border-bottom-style: solid;
+}
+.tabs-content {
+    background-color: #393e46;
+    column-span: all;
+    columns: 3;
+    column-gap: 30px;
+}
+.tabs-content-item {
+    padding: 20px;
+    background-color: red;
+    font-size: 40px;
+}
+/* END */
+
+.span-all {
+    column-span: all;
+}
